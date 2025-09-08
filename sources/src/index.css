@@ -1,0 +1,24 @@
+@import "tailwindcss";@plugin './hero.ts';
+@plugin './hero.ts';
+/* Note: You may need to change the path to fit your project structure */
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+/* был лишний overflow-x */
+.table-container {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.table-container table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-container th,
+.table-container td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
